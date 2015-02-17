@@ -4,7 +4,7 @@ require 'sinatra/json'
 get '/nearby_cities/:id' do
   response.headers['Access-Control-Allow-Origin'] = '*'
   raise ArgumentError unless params[:id] == '42'
-  json :all => ['Cleveland', 'Warrensville', 'Solon', 'Avon Lake']
+  json ['Cleveland', 'Warrensville', 'Solon', 'Avon Lake']
 end
 
 post '/save' do |data|
